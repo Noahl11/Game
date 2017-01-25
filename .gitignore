@@ -2,8 +2,3 @@ Game/.vs/Game/v14/.suo
 Game/Game.sdf
 Game/Game.opensdf
 Game/Game/Game.vcxproj
-*.tlog
-*.log
-*.pdb
-*.obj
-*.idb

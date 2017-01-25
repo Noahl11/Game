@@ -1,6 +1,6 @@
 #pragma once
-#include "../deps/include/sdl/SDL.h"
-#include "../deps/include/GL/glew.h"
+#include <sdl\SDL.h>
+#include <GL\glew.h>
 
 #include <string>
 
