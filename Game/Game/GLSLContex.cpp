@@ -1,5 +1,6 @@
 #include "GLSLContex.h"
-
+#include <vector>
+#include <fstream>
 
 GLSLContex::GLSLContex() : m_numAtrtibs(0), m_programID(0), m_vertexShaderID(0), m_fragmentShaderID(0)
 {
@@ -38,5 +39,38 @@ void GLSLContex::linkShaders() {
 	if (isLinked == GL_FALSE) {
 		GLint maxLength = 0;
 		glGetProgramiv(m_programID, GL_INFO_LOG_LENGTH, &maxLength);
+
+		std::vector<char> errorLog(maxLength);
+		glGetProgramInfoLog(m_programID, maxLength, &maxLength, &errorLog[0]);
+
+		glDeleteProgram(m_programID);
+
+		glDeleteShader(m_vertexShaderID);
+		glDeleteShader(m_fragmentShaderID);
+
+		std::printf("%\n", &(errorLog[0]));
+		//Error Text
 	}
+
+	glDetachShader(m_programID, m_vertexShaderID);;
+	glDetachShader(m_programID, m_fragmentShaderID);
+	glDeleteShader(m_vertexShaderID);
+	glDeleteShader(m_fragmentShaderID);
+
+}
+
+void GLSLContex::addAttribute(const std::string& atribName) {
+	glBindAttribLocation(m_programID, m_numAtrtibs++, atribName.c_str());
+}
+
+GLint GLSLContex::getUniformLocation(const std::string& uniformName) {
+	GLint location = glGetUniformLocation(m_programID, uniformName.c_str());
+	if (location == GL_INVALID_INDEX) {
+		//Error Text
+	}
+	return location;
+}
+
+void GLSLContex::use() {
+
 }
