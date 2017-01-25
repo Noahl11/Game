@@ -29,5 +29,10 @@ void MainGame::init() {
 }
 
 void MainGame::initShaders() {
+	m_shaders.compileShaders("Shaders/vertexShader.txt", "Shaders/fragmentShader.txt");
+	m_shaders.linkShaders();
+}
 
+void MainGame::gameLoop() {
+	
 }

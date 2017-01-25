@@ -3,6 +3,12 @@
 #include <GL\glew.h>
 
 #include "Window.h"
+#include "GLSLContex.h"
+
+enum class GameState {
+	PLAY,
+	EXIT
+};
 
 class MainGame
 {
@@ -18,5 +24,6 @@ private:
 	void initShaders();
 
 	Window m_window;
+	GLSLContex m_shaders;
 };
 
