@@ -25,7 +25,7 @@ void MainGame::init() {
 
 	glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
 
-
+	initShaders();
 }
 
 void MainGame::initShaders() {
