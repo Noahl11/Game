@@ -22,8 +22,11 @@ private:
 	void init();
 	void gameLoop();
 	void initShaders();
+	void processInput();
+	void drawGame();
 
 	Window m_window;
 	GLSLContex m_shaders;
+	GameState m_gameState;
 };
 

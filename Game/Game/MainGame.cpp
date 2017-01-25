@@ -34,5 +34,20 @@ void MainGame::initShaders() {
 }
 
 void MainGame::gameLoop() {
-	
+	while (m_gameState == GameState::PLAY) {
+		processInput();
+		m_window.swapBuffer();
+	}
+}
+
+void MainGame::processInput() {
+	SDL_Event evnt;
+	while (SDL_PollEvent(&evnt)) {
+		switch (evnt.type) {
+			case SDL_QUIT:
+				m_gameState = GameState::EXIT;
+				break;
+		}
+		
+	}
 }
