@@ -72,5 +72,50 @@ GLint GLSLContex::getUniformLocation(const std::string& uniformName) {
 }
 
 void GLSLContex::use() {
+	glUseProgram(m_programID);
+	for (int i = 0; i < m_numAtrtibs; i++) {
+		glEnableVertexAttribArray(i);
+	}
+}
 
+void GLSLContex::unuse() {
+	glUseProgram(0);
+	for (int i = 0; i < m_numAtrtibs; i++) {
+		glDisableVertexAttribArray(i);
+	}
+}
+
+void GLSLContex::compileShader(const std::string& filePath,  GLuint id) {
+	std::ifstream vertexFile(filePath);
+	if (vertexFile.fail()) {
+		perror(filePath.c_str());
+		//Error Text
+	}
+
+	std::string fileContents = "";
+	std::string line;
+
+	while (std::getline(vertexFile, line)) {
+		fileContents += line + "\n";
+	}
+
+	vertexFile.close();
+	const char* constentPtr = fileContents.c_str();
+
+	glShaderSource(id, 1, &constentPtr, nullptr);
+	glCompileShader(id);
+
+	GLint success = 0;
+	glGetShaderiv(id, GL_COMPILE_STATUS, &success);
+	if (success == GL_FALSE) {
+		GLint maxLength = 0;
+		glGetShaderiv(id, GL_INFO_LOG_LENGTH, &maxLength);
+
+		std::vector<char> errorLog(maxLength);
+		glGetShaderInfoLog(id, maxLength, &maxLength, &errorLog[0]);
+
+		glDeleteShader(id);
+
+		std::printf("%s\n", &(errorLog[0]));
+	}
 }
