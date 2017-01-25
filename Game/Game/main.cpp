@@ -1,10 +1,9 @@
-#include <iostream>
-
-using namespace std;
+#include "MainGame.h"
 
 int main() {
 
-	cout << "FUCK YOU";
+	MainGame game;
+	game.run();
 
 	return 0;
 }
