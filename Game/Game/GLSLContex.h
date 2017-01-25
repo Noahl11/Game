@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-#include <GL\glew.h>
+#include "../deps/include/GL/glew.h"
 
 class GLSLContex
 {
