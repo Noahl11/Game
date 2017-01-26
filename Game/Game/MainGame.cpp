@@ -29,7 +29,7 @@ void MainGame::init() {
 }
 
 void MainGame::initShaders() {
-	m_shaders.compileShaders("Shaders/vertexShader.txt", "Shaders/fragmentShader.txt");
+	m_shaders.compileShaders("Shaders/vertexShader.vert", "Shaders/fragmentShader.frag");
 	m_shaders.addAttribute("vertexPosition");
 	m_shaders.addAttribute("vertexColor");
 	m_shaders.linkShaders();
