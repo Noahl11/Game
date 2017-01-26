@@ -23,13 +23,14 @@ void MainGame::init() {
 
 	m_window.create("GAME", 300, 300, 0);
 
-	glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
+	m_camera.init(300, 300);
 
 	initShaders();
 }
 
 void MainGame::initShaders() {
 	m_shaders.compileShaders("Shaders/vertexShader.txt", "Shaders/fragmentShader.txt");
+	m_shaders.addAttribute("vertexPosition");
 	m_shaders.linkShaders();
 }
 
@@ -55,6 +56,15 @@ void MainGame::processInput() {
 void MainGame::drawGame() {
 	glClearDepth(1.0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	m_shaders.use();
+
+	GLint cLocation = m_shaders.getUniformLocation("M");
+	glm::mat4 cameraMatrix = m_camera.getCameraMatrix();
+
+	glUniformMatrix4fv(cLocation, 1, GL_FALSE, &(cameraMatrix[0][0]));
+
+	m_shaders.unuse();
 
 	m_window.swapBuffer();
 }

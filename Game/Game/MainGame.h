@@ -4,6 +4,7 @@
 
 #include "Window.h"
 #include "GLSLContex.h"
+#include "Camera.h"
 
 enum class GameState {
 	PLAY,
@@ -28,5 +29,6 @@ private:
 	Window m_window;
 	GLSLContex m_shaders;
 	GameState m_gameState;
+	Camera m_camera;
 };
 
