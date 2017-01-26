@@ -31,7 +31,6 @@ void MainGame::init() {
 void MainGame::initShaders() {
 	m_shaders.compileShaders("Shaders/vertexShader.vert", "Shaders/fragmentShader.frag");
 	m_shaders.addAttribute("vertexPosition");
-	m_shaders.addAttribute("vertexColor");
 	m_shaders.linkShaders();
 }
 
@@ -59,12 +58,6 @@ void MainGame::drawGame() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	m_shaders.use();
-
-	GLint cLocation = m_shaders.getUniformLocation("M");
-	glm::mat4 cameraMatrix = m_camera.getCameraMatrix();
-
-	glUniformMatrix4fv(cLocation, 1, GL_FALSE, &(cameraMatrix[0][0]));
-
 	m_shaders.unuse();
 
 	m_window.swapBuffer();

@@ -1,10 +1,7 @@
 #version 430
 
-in vec2 fragmentPosition;
-in vec4 vertexColor;
-
-out vec4 color;
+out vec3 color;
 
 void main() {
-	color = vertexColor;
+	color = vec3(0.0f, 1.0f, 0.0f);
 }
