@@ -24,6 +24,7 @@ void MainGame::init() {
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 
 	m_window.create("GAME", m_screenWidth, m_screenHeight, 0);
+	//m_camera.init(m_screenWidth, m_screenHeight);
 
 	initShaders();
 }
@@ -38,6 +39,7 @@ void MainGame::gameLoop() {
 	while (m_gameState == GameState::PLAY) {
 		processInput();
 		m_time += 0.05;
+		//m_camera.update();
 		m_fps_frames++;
 		if (m_fps_lasttime < SDL_GetTicks() - 1 * 1000)
 		{
@@ -59,6 +61,9 @@ void MainGame::processInput() {
 			case SDL_QUIT:
 				m_gameState = GameState::EXIT;
 				break;
+			//case SDL_KEYDOWN:
+				//m_camera.setPosition(m_camera.getPosition() - glm::vec3(0.0f, 0.0f, 1.0f));
+				//break;
 		}
 		
 	}
@@ -72,6 +77,11 @@ void MainGame::drawGame() {
 
 	GLint timeLocation = m_shaders.getUniformLocation("time");
 	glUniform1f(timeLocation, m_time);
+
+	//GLint mLocation = m_shaders.getUniformLocation("M");
+	//glm::mat4 cameraMatrix = m_camera.getCameraMatrix();
+
+	//glUniformMatrix4fv(mLocation, 1, GL_FALSE, &(cameraMatrix[0][0]));
 
 	m_object.draw();
 

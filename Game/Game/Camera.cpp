@@ -14,5 +14,14 @@ Camera::~Camera()
 void Camera::init(int screenWidth, int screenHeight) {
 	m_screenWidth = m_screenWidth;
 	m_screenHeight = m_screenHeight;
-	m_cameraMatrix = glm::perspective(glm::radians(45.0f), (float)m_screenWidth / (float)m_screenHeight, 0.1f, 100.0f);
+	m_persMatrix = glm::perspective(glm::radians(45.0f), (float)m_screenWidth / (float)m_screenHeight, 0.1f, 100.0f);
+}
+
+void Camera::update() {
+	if (m_needsMatrixUpdate) {
+		glm::vec3 translate(-m_position.x + m_screenWidth / 2, -m_position.y + m_screenHeight / 2, m_position.z);
+		m_cameraMatrix = glm::translate(m_persMatrix, translate);
+
+		m_needsMatrixUpdate = false;
+	}
 }

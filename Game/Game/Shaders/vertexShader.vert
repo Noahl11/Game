@@ -2,6 +2,8 @@
 
 in vec2 vertexPosition;
 
+//uniform mat4 M;
+
 void main() {
 	gl_Position.xy = vertexPosition;
 	gl_Position.z = 0.0f;
