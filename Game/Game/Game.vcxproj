@@ -67,8 +67,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Noah\Documents\GitHub\Game\Game\deps\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Noah\Documents\GitHub\Game\Game\deps\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\noahl_000\Documents\GitHub\Game\Game\deps\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\noahl_000\Documents\GitHub\Game\Game\deps\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>C:\Users\Noah\Documents\GitHub\Game\Game\deps\include;$(IncludePath)</IncludePath>

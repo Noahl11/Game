@@ -38,7 +38,7 @@ void MainGame::initShaders() {
 void MainGame::gameLoop() {
 	while (m_gameState == GameState::PLAY) {
 		processInput();
-		m_time += 0.05;
+		m_time += 1.0f;
 		//m_camera.update();
 		m_fps_frames++;
 		if (m_fps_lasttime < SDL_GetTicks() - 1 * 1000)
