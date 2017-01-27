@@ -21,7 +21,8 @@ public:
 
 private:
 	SDL_Window* m_sdlWindow;
-	int m_screenWidth, m_screenHeight;
+	int m_screenWidth;
+	int m_screenHeight;
 
 };
 

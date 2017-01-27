@@ -1,0 +1,13 @@
+﻿  Window.cpp
+c:\users\noah\documents\github\game\game\deps\include\sdl\sdl_platform.h(121): fatal error C1083: Cannot open include file: 'winapifamily.h': No such file or directory
+  Object.cpp
+c:\users\noah\documents\github\game\game\deps\include\gl\glew.h(1202): fatal error C1083: Cannot open include file: 'GL/glu.h': No such file or directory
+  MainGame.cpp
+c:\users\noah\documents\github\game\game\deps\include\sdl\sdl_platform.h(121): fatal error C1083: Cannot open include file: 'winapifamily.h': No such file or directory
+  main.cpp
+c:\users\noah\documents\github\game\game\deps\include\sdl\sdl_platform.h(121): fatal error C1083: Cannot open include file: 'winapifamily.h': No such file or directory
+  GLSLContex.cpp
+c:\users\noah\documents\github\game\game\game\glslcontex.h(2): fatal error C1083: Cannot open include file: 'string': No such file or directory
+  Camera.cpp
+c:\users\noah\documents\github\game\game\deps\include\glm\detail\_fixes.hpp(33): fatal error C1083: Cannot open include file: 'cmath': No such file or directory
+  Generating Code...

@@ -5,6 +5,8 @@
 #include "Window.h"
 #include "GLSLContex.h"
 #include "Camera.h"
+#include "Object.h"
+
 
 enum class GameState {
 	PLAY,
@@ -26,9 +28,13 @@ private:
 	void processInput();
 	void drawGame();
 
+	int m_screenWidth = 1024;
+	int m_screenHeight = 720;
+
 	Window m_window;
 	GLSLContex m_shaders;
 	GameState m_gameState;
 	Camera m_camera;
+	Object m_object;
 };
 

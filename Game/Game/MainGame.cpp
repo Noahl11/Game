@@ -13,6 +13,8 @@ MainGame::~MainGame()
 void MainGame::run() {
 	init();
 
+	m_object.init(-0.5f, -0.5f, 1.0f, 1.0f);
+
 	gameLoop();
 }
 
@@ -21,9 +23,7 @@ void MainGame::init() {
 
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 
-	m_window.create("GAME", 300, 300, 0);
-
-	m_camera.init(300, 300);
+	m_window.create("GAME", m_screenWidth, m_screenHeight, 0);
 
 	initShaders();
 }
@@ -58,6 +58,9 @@ void MainGame::drawGame() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	m_shaders.use();
+
+	m_object.draw();
+
 	m_shaders.unuse();
 
 	m_window.swapBuffer();
