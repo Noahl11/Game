@@ -38,6 +38,16 @@ void MainGame::gameLoop() {
 	while (m_gameState == GameState::PLAY) {
 		processInput();
 		m_time += 0.05;
+		m_fps_frames++;
+		if (m_fps_lasttime < SDL_GetTicks() - 1 * 1000)
+		{
+			m_fps_lasttime = SDL_GetTicks();
+			m_fps_current = m_fps_frames;
+			m_fps_frames = 0;
+		}
+
+		//printf("%d \n", m_fps_current);
+
 		drawGame();
 	}
 }

@@ -37,5 +37,9 @@ private:
 	GameState m_gameState;
 	Camera m_camera;
 	Object m_object;
+
+	Uint32 m_fps_lasttime = SDL_GetTicks(); //the last recorded time.
+	Uint32 m_fps_current; //the current FPS.
+	Uint32 m_fps_frames = 0; //frames passed since the last recorded fps.
 };
 
