@@ -30,6 +30,7 @@ private:
 
 	int m_screenWidth = 1024;
 	int m_screenHeight = 720;
+	float m_time = 0.0f;
 
 	Window m_window;
 	GLSLContex m_shaders;

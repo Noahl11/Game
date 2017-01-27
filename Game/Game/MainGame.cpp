@@ -13,7 +13,7 @@ MainGame::~MainGame()
 void MainGame::run() {
 	init();
 
-	m_object.init(-0.5f, -0.5f, 1.0f, 1.0f);
+	m_object.init(-1.0f, -1.0f, 2.0f, 2.0f);
 
 	gameLoop();
 }
@@ -37,6 +37,7 @@ void MainGame::initShaders() {
 void MainGame::gameLoop() {
 	while (m_gameState == GameState::PLAY) {
 		processInput();
+		m_time += 0.05;
 		drawGame();
 	}
 }
@@ -58,6 +59,9 @@ void MainGame::drawGame() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	m_shaders.use();
+
+	GLint timeLocation = m_shaders.getUniformLocation("time");
+	glUniform1f(timeLocation, m_time);
 
 	m_object.draw();
 
