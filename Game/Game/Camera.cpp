@@ -12,9 +12,9 @@ Camera::~Camera()
 }
 
 void Camera::init(int screenWidth, int screenHeight) {
-	m_screenWidth = m_screenWidth;
-	m_screenHeight = m_screenHeight;
-	m_persMatrix = glm::perspective(glm::radians(45.0f), (float)m_screenWidth / (float)m_screenHeight, 0.1f, 100.0f);
+	m_screenWidth = screenWidth;
+	m_screenHeight = screenHeight;
+	m_persMatrix = glm::perspective(glm::radians(45.0f), (float)screenWidth / (float)screenHeight, 0.1f, 100.0f);
 }
 
 void Camera::update() {

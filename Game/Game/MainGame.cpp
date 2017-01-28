@@ -23,7 +23,7 @@ void MainGame::init() {
 
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 
-	m_window.create("GAME", m_screenWidth, m_screenHeight, 0);
+	m_window.create("Forgotten", m_screenWidth, m_screenHeight, 0);
 	m_camera.init(m_screenWidth, m_screenHeight);
 
 	initShaders();

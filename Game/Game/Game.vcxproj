@@ -144,6 +144,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="OBJLoader.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +152,8 @@
     <ClInclude Include="GLSLContex.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="OBJLoader.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

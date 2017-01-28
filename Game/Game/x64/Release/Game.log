@@ -1,33 +1,8 @@
-﻿GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewEnableVertexAttribArray
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewUseProgram
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderiv
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewCompileShader
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewCreateShader
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewBindAttribLocation
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewCreateProgram
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderInfoLog
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewGetProgramiv
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewGetUniformLocation
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewAttachShader
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewDeleteProgram
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewShaderSource
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewDisableVertexAttribArray
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewDetachShader
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewGetProgramInfoLog
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewDeleteShader
-GLSLContex.obj : error LNK2001: unresolved external symbol __imp___glewLinkProgram
-MainGame.obj : error LNK2001: unresolved external symbol SDL_Init
-MainGame.obj : error LNK2001: unresolved external symbol SDL_GL_SetAttribute
-MainGame.obj : error LNK2001: unresolved external symbol SDL_PollEvent
-Object.obj : error LNK2001: unresolved external symbol __imp___glewVertexAttribPointer
-Object.obj : error LNK2001: unresolved external symbol __imp___glewBindBuffer
-Object.obj : error LNK2001: unresolved external symbol __imp___glewBufferData
-Object.obj : error LNK2001: unresolved external symbol __imp___glewGenBuffers
-Object.obj : error LNK2001: unresolved external symbol __imp___glewDeleteBuffers
-Window.obj : error LNK2001: unresolved external symbol SDL_GL_SwapWindow
-Window.obj : error LNK2001: unresolved external symbol SDL_GL_CreateContext
-Window.obj : error LNK2001: unresolved external symbol SDL_GL_SetSwapInterval
-Window.obj : error LNK2001: unresolved external symbol SDL_CreateWindow
-Window.obj : error LNK2001: unresolved external symbol __imp_glewInit
-MSVCRT.lib(exe_main.obj) : error LNK2001: unresolved external symbol main
-C:\Users\Noah\Documents\GitHub\Game\Game\x64\Release\Game.exe : fatal error LNK1120: 32 unresolved externals
+﻿Build started 1/27/2017 9:26:11 PM.
+     1>Project "C:\Users\Noah\Documents\GitHub\Game\Game\Game\Game.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.Cpp.Platform.targets(64,5): error MSB8020: The build tools for v140 (Platform Toolset = 'v140') cannot be found. To build using the v140 build tools, please install v140 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Upgrade Solution...".
+     1>Done Building Project "C:\Users\Noah\Documents\GitHub\Game\Game\Game\Game.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.00

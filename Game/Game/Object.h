@@ -1,5 +1,6 @@
 #pragma once
 #include <GL\glew.h>
+#include "OBJLoader.h"
 
 class Object
 {
@@ -20,6 +21,11 @@ private:
 	float m_height;
 	float m_depth;
 	GLuint m_vboID = 0;
+	OBJLoader m_Loader;
+
+	std::vector< glm::vec3 > m_vertices;
+	std::vector< glm::vec2 > m_uvs;
+	std::vector< glm::vec3 > m_normals;
 
 };
 
