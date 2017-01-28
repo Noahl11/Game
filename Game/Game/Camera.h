@@ -31,6 +31,9 @@ private:
 	float m_rotation;
 	bool m_needsMatrixUpdate;
 	glm::vec3 m_position;
+	glm::mat4 m_projectionMatrix;
+	glm::mat4 m_transformationMatrix;
+	glm::mat4 m_viewMaatrix;
 	glm::mat4 m_cameraMatrix;
 	glm::mat4 m_persMatrix;
 };
