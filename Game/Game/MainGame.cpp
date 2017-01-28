@@ -108,10 +108,3 @@ void MainGame::drawGame() {
 
 	m_window.swapBuffer();
 }
-#include <iostream.h>
-
-main()
-{
-    cout << "Hello World!";
-    return 0;
-}
