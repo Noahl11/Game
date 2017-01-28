@@ -81,6 +81,12 @@ void MainGame::processInput() {
 					case SDLK_SPACE:
 						m_camera.setPosition(m_camera.getPosition() -= glm::vec3(0.0f, 0.1f, 0.0f));
 						break;
+					case SDLK_q:
+						m_camera.setRotation(m_camera.getRotation() + 0.1f);
+						break;
+					case SDLK_e:
+						m_camera.setRotation(m_camera.getRotation() - 0.1f);
+						break;
 				}
 				break;
 		}
@@ -97,7 +103,7 @@ void MainGame::drawGame() {
 	GLint timeLocation = m_shaders.getUniformLocation("time");
 	glUniform1f(timeLocation, m_time);
 
-	GLint mLocation = m_shaders.getUniformLocation("M");
+	GLint mLocation = m_shaders.getUniformLocation("transformationMatrix");
 	glm::mat4 cameraMatrix = m_camera.getCameraMatrix();
 
 	glUniformMatrix4fv(mLocation, 1, GL_FALSE, &(cameraMatrix[0][0]));
