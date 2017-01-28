@@ -1,13 +1,13 @@
 #version 330
 
-in vec2 vertexPosition;
+in vec3 vertexPosition;
 
 out vec4 fragmentColor;
 
+uniform mat4 M;
+
 void main() {
-	gl_Position.xy = vertexPosition;
-	gl_Position.z = 0.0f;
-	gl_Position.w = 1.0f;
+	gl_Position = M * vec4(vertexPosition, 1.0);
 	
 	vec4 vertexColor = vec4(0.0f, 0.0f, 0.0f, 1.0f);
 	

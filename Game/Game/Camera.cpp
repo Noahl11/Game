@@ -19,7 +19,7 @@ void Camera::init(int screenWidth, int screenHeight) {
 
 void Camera::update() {
 	if (m_needsMatrixUpdate) {
-		glm::vec3 translate(-m_position.x + m_screenWidth / 2, -m_position.y + m_screenHeight / 2, m_position.z);
+		glm::vec3 translate(m_position.x, m_position.y, m_position.z);
 		m_cameraMatrix = glm::translate(m_persMatrix, translate);
 
 		m_needsMatrixUpdate = false;
