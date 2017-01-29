@@ -10,7 +10,7 @@ SoildPhysics::~SoildPhysics()
 {
 }
 glm::vec3 SoildPhysics::Velocity() {
-    //Do some maths here
+    glm::vec3 answer -32x + I
     return answer;
 }
 
