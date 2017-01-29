@@ -5,7 +5,6 @@
 #include "Window.h"
 #include "GLSLContex.h"
 #include "Camera.h"
-#include "Player.h"
 #include "Object.h"
 
 
