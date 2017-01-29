@@ -1,24 +1,13 @@
-﻿Build started 1/28/2017 2:17:03 AM.
+﻿Build started 1/28/2017 8:08:21 PM.
      1>Project "C:\Users\Noah\Documents\GitHub\Game\Game\Game\Game.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Camera.cpp MainGame.cpp main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Camera.cpp main.cpp MainGame.cpp
          Camera.cpp
-         MainGame.cpp
          main.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Noah\Documents\GitHub\Game\Game\Release\Game.exe" /NOLOGO SDL2.lib SDL2_mixer.lib SDL2_ttf.lib SDL2main.lib SDL2test.lib glew32.lib glew32s.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Noah\Documents\GitHub\Game\Game\Release\Game.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Noah\Documents\GitHub\Game\Game\Release\Game.lib" /MACHINE:X86 /SAFESEH Release\Camera.obj
-         Release\GLSLContex.obj
-         Release\main.obj
-         Release\MainGame.obj
-         Release\Object.obj
-         Release\OBJLoader.obj
-         Release\Window.obj
-         Generating code
-     1>c:\users\noah\documents\github\game\game\game\objloader.cpp(84): warning C4715: 'OBJLoader::load' : not all control paths return a value
-         Finished generating code
-         Game.vcxproj -> C:\Users\Noah\Documents\GitHub\Game\Game\Release\Game.exe
-     1>Done Building Project "C:\Users\Noah\Documents\GitHub\Game\Game\Game\Game.vcxproj" (Build target(s)).
+         MainGame.cpp
+     1>MainGame.cpp(5): error C2512: 'Camera' : no appropriate default constructor available
+     1>Done Building Project "C:\Users\Noah\Documents\GitHub\Game\Game\Game\Game.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:01.75
+Time Elapsed 00:00:01.16

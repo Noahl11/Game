@@ -61,34 +61,6 @@ void MainGame::processInput() {
 			case SDL_QUIT:
 				m_gameState = GameState::EXIT;
 				break;
-			case SDL_KEYDOWN:
-				switch (evnt.key.keysym.sym) {
-					case SDLK_w:
-						m_camera.setPosition(m_camera.getPosition() += glm::vec3(0.0f, 0.0f, 0.1f));
-						break;
-					case SDLK_s:
-						m_camera.setPosition(m_camera.getPosition() -= glm::vec3(0.0f, 0.0f, 0.1f));
-						break;
-					case SDLK_a:
-						m_camera.setPosition(m_camera.getPosition() += glm::vec3(0.1f, 0.0f, 0.0f));
-						break;
-					case SDLK_d:
-						m_camera.setPosition(m_camera.getPosition() -= glm::vec3(0.1f, 0.0f, 0.0f));
-						break;
-					case SDLK_LSHIFT:
-						m_camera.setPosition(m_camera.getPosition() += glm::vec3(0.0f, 0.1f, 0.0f));
-						break;
-					case SDLK_SPACE:
-						m_camera.setPosition(m_camera.getPosition() -= glm::vec3(0.0f, 0.1f, 0.0f));
-						break;
-					case SDLK_q:
-						m_camera.setRotation(m_camera.getRotation() + 0.1f);
-						break;
-					case SDLK_e:
-						m_camera.setRotation(m_camera.getRotation() - 0.1f);
-						break;
-				}
-				break;
 		}
 		
 	}

@@ -2,11 +2,12 @@
 
 #include <glm\glm.hpp>
 #include <glm\gtc\matrix_transform.hpp>
+#include "Player.h"
 
 class Camera
 {
 public:
-	Camera();
+	Camera(Player player);
 	~Camera();
 
 	void init(int screenWidth, int screenHeight);
@@ -27,8 +28,19 @@ public:
 	glm::mat4 getCameraMatrix() { return m_cameraMatrix; }
 
 private:
+
+	Player m_player;
+
+	void caculatePitch();
+	void caculateHorizontalDistance();
+	void caculateVerticalDistance();
+	void caculateCameraPosition(float horizontal);
+
 	int m_screenWidth, m_screenHeight;
 	float m_rotation;
+	float m_pitch = 0;
+	float m_yaw = 0;
+	float m_roll = 0;
 	bool m_needsMatrixUpdate;
 	glm::vec3 m_position;
 	glm::mat4 m_projectionMatrix;

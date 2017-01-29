@@ -140,22 +140,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="GLSLContex.cpp" />
     <ClCompile Include="LiquidPhysics.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="OBJLoader.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="water.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="GLSLContex.h" />
     <ClInclude Include="LiquidPhysics.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="OBJLoader.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resource1.h" />
     <ClInclude Include="water.h" />
